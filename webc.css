@@ -1,0 +1,180 @@
+/* تغيير الخط للعناوين التي تظهر في بداية ونهاية الصفحة فقط */
+h1, h2 {
+    font-family: initial; /* هذا يعيد الخط إلى الخط الافتراضي للمتصفح */
+    text-align: center;
+
+
+  }
+  
+
+
+
+  /* باقي الصفحة سيظل كما هو */
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Righteous", cursive; /* الخط الأصلي للبطاقات */
+    min-height: 100vh;
+    background-color: #ffffff;
+  }
+  
+  .container {
+    max-width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 35px;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+  
+  .card {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    margin: 0 auto;
+    background: #000;
+    border-radius: 15px;
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+  
+  .face {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .face.back {
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  
+  .face.back h2 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .face.back .desc {
+    background-color: #eee;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .face.front {
+    transition: 0.5s;
+  }
+  
+  .face.front h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+    color: #fff;
+    transition: 0.5s;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+  
+  .card:hover .face.front {
+    height: 60px;
+  }
+  
+  .card:hover .face.front h2 {
+    font-size: 2em;
+  }
+  
+  .face.front {
+    background-color: #0cbaba;
+    background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+    border-radius: 15px;
+  }
+  
+ 
+
+
+
+
+
+  /* تغيير الخط والتموضع للنصوص */
+h2, p {
+    font-family: initial; /* الخط الافتراضي */
+    text-align: center; /* محاذاة النص إلى المنتصف */
+  }
+
+  
+  
+
+  hr.separator {
+    border: none;
+    width: 100vw; /* عرض كامل الشاشة */
+    height: 4px;
+    background-color: #9b59b6; /* اللون البنفسجي */
+    margin: 0; /* إزالة الهوامش */
+    padding: 0; /* إزالة الحشو */
+    position: relative;
+    left: 0;
+    margin-top: 99px; /* مسافة بين hr والعناصر فوقه */
+    margin-bottom: 90px; /* مسافة بين الخط والمستطيلين */
+
+
+  }
+
+
+
+
+  .rectangle-container {
+    display: flex;
+    gap: 20px; /* مسافة بين المستطيلات */
+    justify-content: center; /* توسيط المستطيلات */
+    margin: 20px 0; /* مسافة عمودية أعلى وأسفل الحاوية */
+  }
+  
+  .rectangle {
+    width: 370px; /* عرض المستطيل */
+    height: 75px; /* ارتفاع المستطيل */
+    background-color: #35343565; /* لون بنفسجي غامق */
+    color: #000; /* لون النص أسود */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px; /* حواف دائرية للمستطيل */
+    cursor: pointer;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* ظل خفيف */
+    text-align: center;
+    transition: background-color 0.3s ease; /* تأثير عند التحريك */
+  }
+  
+  .rectangle:hover {
+    background-color: #aea8b2; /* تغيير لون المستطيل عند التحويم */
+  }
+  
+
+
+
+  /* تنسيق الشعار */
+.logo {
+    position: absolute; /* لجعل الصورة تظهر في موقع ثابت */
+    left: 20px; /* المسافة من اليسار */
+    top: 10px; /* المسافة من الأعلى */
+    width: 320px; /* عرض الصورة */
+    height: 220px; /* الحفاظ على النسبة الأصلية للصورة */
+  }
+  
+
+
+
+
+
+
+
+  
