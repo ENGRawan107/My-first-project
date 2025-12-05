@@ -1,12 +1,8 @@
 h1, h2 {
     font-family: initial; 
     text-align: center;
-}
-
-/* ======================= */
-/*      GENERAL STYLE      */
-/* ======================= */
-body {
+  }
+    body {
     margin: 0;
     padding: 0;
     display: flex;
@@ -16,24 +12,17 @@ body {
     font-family: "Righteous", cursive; 
     min-height: 100vh;
     background-color: #ffffff;
-}
-
-/* ======================= */
-/*       GRID FIXED        */
-/* ======================= */
-.container {
+  } 
+  .container {
     max-width: 100vw;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 35px;
     margin: 0 auto;
     padding: 40px 0;
-}
-
-/* ======================= */
-/*         CARD            */
-/* ======================= */
-.card {
+  }
+  
+  .card {
     position: relative;
     width: 250px;
     height: 350px;
@@ -42,9 +31,9 @@ body {
     border-radius: 15px;
     box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
     cursor: pointer;
-}
-
-.face {
+  }
+  
+  .face {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -53,23 +42,29 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.face.back {
+  }
+  
+  .face.back {
     box-sizing: border-box;
     padding: 20px;
-}
-
-.face.back h2 {
+  }
+  
+  .face.back h2 {
     margin: 0;
     padding: 0;
-}
-
-.face.front {
+  }
+  
+  .face.back .desc {
+    background-color: #eee;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .face.front {
     transition: 0.5s;
-}
-
-.face.front h2 {
+  }
+  
+  .face.front h2 {
     margin: 0;
     padding: 0;
     font-size: 2em;
@@ -77,49 +72,47 @@ body {
     transition: 0.5s;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 10;
-}
-
-.card:hover .face.front {
+  }
+  
+  .card:hover .face.front {
     height: 60px;
-}
-
-.card:hover .face.front h2 {
+  }
+  
+  .card:hover .face.front h2 {
     font-size: 2em;
-}
-
-.face.front {
+  }
+  
+  .face.front {
     background-color: #0cbaba;
     background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
     border-radius: 15px;
-}
-
-/* ======================= */
-/*        OTHER UI         */
-/* ======================= */
+  }
+  
 h2, p {
     font-family: initial;
     text-align: center;
-}
-
-hr.separator {
+  }
+  hr.separator {
     border: none;
     width: 100vw; 
     height: 4px;
     background-color: #9b59b6; 
     margin: 0; 
     padding: 0; 
+    position: relative;
+    left: 0;
     margin-top: 99px; 
     margin-bottom: 90px; 
-}
 
-.rectangle-container {
+  }
+  .rectangle-container {
     display: flex;
     gap: 20px; 
     justify-content: center; 
     margin: 20px 0; 
-}
-
-.rectangle {
+  }
+  
+  .rectangle {
     width: 370px; 
     height: 75px; 
     background-color: #35343565; 
@@ -134,88 +127,15 @@ hr.separator {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
     text-align: center;
     transition: background-color 0.3s ease; 
-}
-
-.rectangle:hover {
+  }
+  
+  .rectangle:hover {
     background-color: #aea8b2; 
-}
-
-/* ======================= */
-/*        LOGO FIX         */
-/* ======================= */
+  }
 .logo {
     position: absolute; 
     left: 20px; 
     top: 10px;
-    width: 200px;     /* ↓↓ تصغير للشاشات الصغيرة */
-    height: auto;   
-}
-
-/* ======================= */
-/*     RESPONSIVE FIX      */
-/* ======================= */
-@media (max-width: 768px) {
-
-    .container {
-        grid-template-columns: repeat(2, 1fr); /* بدال 4 يصير 2 */
-        grid-gap: 20px;
-    }
-
-    .card {
-        width: 180px;
-        height: 260px;
-    }
-
-    .rectangle {
-        width: 90%;
-        height: 65px;
-        font-size: 14px;
-    }
-
-    .logo {
-        width: 150px;  /* تصغير مناسب للجوال */
-        left: 10px;
-        top: 5px;
-    }
-}
-
-@media (max-width: 480px) {
-
-    .container {
-        grid-template-columns: repeat(1, 1fr); /* كرت واحد فقط للجوال الصغير */
-    }
-
-    .card {
-        width: 85%;
-        height: 250px;
-    }
-
-    .logo {
-        width: 130px;
-    }
-}
-
-/* إصلاح الشعار للجوال */
-@media (max-width: 768px) {
-    .logo {
-        position: relative !important;
-        width: 120px !important;
-        height: auto !important;
-        margin: 20px auto 10px auto !important;
-        left: 0 !important;
-        top: 0 !important;
-        display: block;
-    }
-
-    body {
-        align-items: flex-start !important;
-    }
-
-    h1, h2 {
-        font-size: 20px;
-        text-align: center;
-        width: 100%;
-        padding: 0 10px;
-    }
-}
-
+    width: 320px; 
+    height: 220px; 
+  }
