@@ -194,3 +194,28 @@ hr.separator {
         width: 130px;
     }
 }
+
+/* إصلاح الشعار للجوال */
+@media (max-width: 768px) {
+    .logo {
+        position: relative !important;
+        width: 120px !important;
+        height: auto !important;
+        margin: 20px auto 10px auto !important;
+        left: 0 !important;
+        top: 0 !important;
+        display: block;
+    }
+
+    body {
+        align-items: flex-start !important;
+    }
+
+    h1, h2 {
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
